@@ -6,4 +6,7 @@ if [ "$IFACE" = "<%= @interface -%>" ]; then
 <%- (0..(@iprule.length-1)).each do |id| -%>
     ip rule del <%= @iprule[id] %>
 <%- end -%>
+<%- (0..(@ip6rule.length-1)).each do |id| -%>
+    ip -6 rule del <%= @ip6rule[id] %>
+<%- end -%>
 fi

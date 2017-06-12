@@ -27,6 +27,7 @@
 
 define network::rule (
   $iprule,
+  $ip6rule   = [],
   $interface = $name,
   $ensure    = 'present'
 ) {
